@@ -192,3 +192,7 @@ crowdsale-page
 ├── screenshot.png
 └── yarn.lock
 ```
+
+## License
+
+MIT © [Cofab](https://github.com/cofablab)
