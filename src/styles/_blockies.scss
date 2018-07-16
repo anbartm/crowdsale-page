@@ -1,0 +1,10 @@
+.identicon {
+  // margin-bottom: 10px;
+  border: 2px solid $primary-color;
+}
+
+.limit-check {
+  .identicon {
+    margin: 10px 10px -8px 10px;
+  }
+}

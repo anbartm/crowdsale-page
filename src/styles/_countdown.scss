@@ -1,0 +1,54 @@
+.time-container {
+  // width:200px;
+  font-size: 54px;
+  color: #fff;
+  margin: auto;
+  margin-bottom: 0px;
+  &.dark {
+    color: #000 !important;
+  }
+  &.small {
+    font-size: 3rem;
+  }
+  @media (max-width: 575px) {
+    font-size: 3rem;
+  }
+}
+
+.time {
+  font-weight: 300;
+  margin-bottom: 0;
+  margin: 0 10px;
+  display: inline-block;
+  small {
+    margin-top: 5px;
+    display: block;
+    background: transparent !important;
+    font-size: 1rem;
+  }
+}
+.time-units {
+  font-size: 10px;
+  width: 175px;
+  margin: auto;
+}
+.time-unit {
+  width: 25%;
+  display: inline-block;
+}
+.time-units-h {
+  width: 410px;
+}
+.time-unit-h {
+  margin-bottom: 0;
+}
+.time-h {
+  background: rgba(#000, 0.1);
+  width: 80px;
+  display: inline-block;
+  font-weight: 400;
+  margin-top: -10px;
+  @media (max-width: 575px) {
+    width: 50px;
+  }
+}

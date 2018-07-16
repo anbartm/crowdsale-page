@@ -1,0 +1,67 @@
+// progres bar
+@-webkit-keyframes moving-gradient {
+  0% {
+    background-position: left bottom;
+  }
+  100% {
+    background-position: right bottom;
+  }
+}
+
+.bar {
+  position: absolute;
+  margin-top: -52px;
+  margin-left: -15px;
+  width: 100%;
+  height: 5px;
+  background: -webkit-linear-gradient(left, #e9e9e9 30%, #e9e9e9 100%) repeat;
+
+  &.loading {
+    background: -webkit-linear-gradient(left, #e9e9e9 10%, $primary-color 50%, #e9e9e9 90%) repeat;
+
+    -webkit-background-size: 50% 100%;
+    -webkit-animation-name: moving-gradient;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+  }
+}
+
+.half {
+  width: 100%;
+  overflow-x: hidden;
+}
+.half.full {
+  width: 100%;
+}
+.half .bar {
+  width: 100%;
+}
+.half.full .bar {
+  -webkit-animation-duration: 2s;
+}
+
+.sexy {
+  // border: 1px solid #adadad;
+  // -webkit-border-radius: 2px;
+}
+
+.sexy .gradient-overlay {
+  position: absolute;
+  height: 5px;
+
+  background-image: -webkit-linear-gradient(
+    top,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0) 50%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+}
+
+// .sexy .border-overlay {
+//   position: absolute;
+//   width: 100%;
+//   height: 28px;
+//   border: 1px solid rgba(255, 255, 255, 0.15);
+// }

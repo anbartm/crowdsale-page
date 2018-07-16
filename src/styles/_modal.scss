@@ -1,0 +1,85 @@
+.cf-modal {
+  position: absolute;
+  top: 13%;
+  left: 25%;
+  right: 25%;
+  bottom: 23%;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 4px;
+  outline: none;
+  padding: 0px;
+  height: 500px;
+
+  @media (min-width: 992px) and (max-width: 1200px) {
+    top: 15%;
+    left: 15%;
+    right: 15%;
+    bottom: 15%;
+    overflow: auto;
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+    top: 10%;
+    left: 10%;
+    right: 10%;
+    bottom: 10%;
+    overflow: auto;
+    height: 700px;
+  }
+  @media (max-width: 768px) {
+    top: 10%;
+    left: 5%;
+    right: 5%;
+    bottom: 10%;
+    overflow: auto;
+  }
+  .btn.btn-default {
+    box-shadow: none;
+    height: 44px;
+    border-radius: 0;
+    margin-top: -7px;
+  }
+  .clipboard-alert {
+    margin-top: 4px;
+    display: block;
+    opacity: 0.5;
+  }
+  .identicon {
+    margin-top: 2px;
+  }
+}
+
+.cf-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.75);
+  z-index: 9000;
+}
+
+.the_address {
+  padding: 10px;
+  background-color: rgba($primary-color, 1);
+  color: white;
+  // border-radius: 5px;
+  font-size: 18px;
+  height: 44px;
+  display: inline-block;
+  @media (max-width: 768px) {
+    font-size: 12px;
+    display: block;
+    height: 38px;
+    margin-bottom: 14px;
+  }
+
+  &::selection {
+    background: #bb4ab3; /* WebKit/Blink Browsers */
+    color: white;
+  }
+  &::-moz-selection {
+    background: #bb4ab3; /* Gecko Browsers */
+    color: white;
+  }
+}

@@ -1,0 +1,215 @@
+.rheostat {
+  overflow: visible;
+  &.maxedOut {
+    .rheostat-handle {
+      margin-left: -22px !important;
+    }
+    .rheostat-progress {
+      width: 98% !important;
+      @media (max-width: 575px) {
+        width: 97% !important;
+      }
+    }
+  }
+
+  &.minimum {
+    .rheostat-handle {
+      margin-left: 3px;
+    }
+  }
+}
+
+.rheostat-background {
+  background-color: transparent;
+  border: 2px solid #d8d8d8;
+  position: relative;
+  border-radius: 15px;
+}
+
+.rheostat-progress {
+  background-color: $primary-color;
+  position: absolute;
+  border-radius: 15px;
+  transition: all 2s;
+}
+
+.rheostat-handle {
+  height: 18px;
+  border-radius: 50%;
+  border: 3px solid white;
+  background-color: rgba(111, 111, 111, 1);
+  box-shadow: none;
+  outline: none;
+  z-index: 10 !important;
+  margin-top: 8px;
+}
+
+// .rheostat-handle:before,
+// .rheostat-handle:after {
+//   content: '';
+//   display: block;
+//   position: absolute;
+//   background-color: #dadfe8;
+// }
+
+.rheostat-horizontal {
+  height: 24px;
+}
+
+.rheostat-horizontal .rheostat-background {
+  height: 24px;
+  top: 0px;
+  width: 100%;
+}
+
+.rheostat-horizontal .rheostat-progress {
+  height: 14px;
+  top: 5px;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.rheostat-horizontal .rheostat-handle {
+  margin-left: -12px;
+  top: -5px;
+  opacity: 0;
+  @media (max-width: 575px) {
+    display: none;
+  }
+}
+
+.rheostat-horizontal .rheostat-handle:before,
+.rheostat-horizontal .rheostat-handle:after {
+  top: 7px;
+  height: 10px;
+  width: 1px;
+}
+
+.rheostat-horizontal .rheostat-handle:before {
+  left: 10px;
+}
+
+.rheostat-horizontal .rheostat-handle:after {
+  left: 13px;
+}
+
+.contrib-button {
+  color: white;
+  margin-top: 80px;
+  @media (max-width: 575px) {
+    margin-top: 40px;
+  }
+}
+
+.pit-component {
+  background: #fff;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  top: 6px;
+  &.first {
+    margin-left: 5px;
+  }
+  &.middle {
+    margin-left: -6px;
+  }
+  &.last {
+    margin-left: -16px;
+  }
+  @media (max-width: 575px) {
+    font-size: 14px !important;
+    display: none;
+  }
+}
+
+.goals-p {
+  font-size: 12px;
+  margin-left: 0px;
+  position: absolute;
+  margin-left: -80px;
+  width: 160px;
+  top: 22px;
+  @media (max-width: 575px) {
+    display: none;
+  }
+  @media (min-width: 576px) and (max-width: 769px) {
+    width: 100px;
+    font-size: 10px;
+    margin-left: -50px;
+  }
+}
+.goals-sum {
+  font-size: 11px;
+  padding: 4px;
+  border-radius: 0;
+  position: absolute;
+  margin-top: 36px;
+  margin-left: -35px;
+  width: 70px;
+  font-size: 12px;
+  @media (max-width: 575px) {
+    width: 36px;
+    margin-left: -18px;
+    font-size: 10px;
+    display: none;
+  }
+  @media (min-width: 576px) and (max-width: 991px) {
+    width: 70px;
+    margin-left: -35px;
+    font-size: 12px;
+  }
+}
+
+// toltip above slider
+.tooltip-top {
+  background-image: url('img/tooltip.png');
+  background-size: cover;
+  width: 215px;
+  height: 88px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  transition: all 2s;
+  @media (max-width: 575px) {
+    margin-left: 0px !important;
+    position: relative;
+    font-size: 10px;
+    background-image: none;
+    width: 100%;
+    p {
+      text-align: center !important;
+    }
+  }
+}
+.tooltip-row {
+  width: 920px;
+  margin: auto;
+}
+.tooltip-p {
+  font-size: 11px;
+  text-align: left;
+  padding-left: 15px;
+  padding-top: 7px;
+  margin-bottom: 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+.tooltip-p:nth-child(3) {
+  padding-top: 0;
+}
+.tooltip-h {
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+  text-align: left;
+  padding-left: 15px;
+  margin-bottom: 0;
+}
+.counter-h {
+  font-weight: 700 !important;
+  color: white !important;
+}
+.tooltip-h > span {
+  font-size: 24px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.8);
+}
