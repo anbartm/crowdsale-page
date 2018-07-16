@@ -1,8 +1,8 @@
 # Crowdsale page
 
-Crowdsale app build on top of create-react-app (ejected), usefull for monitoring wallets during a crowdsale. Tailored for crowdsales with multiple phases, the app is equiped with countdowns, contribution sum slider, modal for TOS confirmation, contribution address, blockie & wallet whitelist check\*.
+Crowdsale app build on top of create-react-app (ejected), usefull for monitoring wallets during a crowdsale. Tailored for crowdsales with multiple phases, the app is equiped with countdowns, contribution sum slider, modal for TOS confirmation, contribution address, blockie & wallet whitelist check.
 <br/>
-\*The app is configured to call etherscan every 10 seconds but you need you own API for the whitelist check.
+The app is configured to call etherscan every 10 seconds, you can add addresses to the whitelist in `src/modules/others`.
 <br/><br/>
 ![Demo](./screenshot.png)
 <br/>
@@ -121,7 +121,6 @@ crowdsale-page
 │   │   ├── SocialLinks
 │   │   ├── Terms
 │   │   ├── TextInput
-│   │   ├── Time
 │   │   ├── TopNav
 │   │   └── Warning
 │   ├── crowdsale
@@ -168,7 +167,6 @@ crowdsale-page
 │   │   ├── _banner.scss
 │   │   ├── _bar.scss
 │   │   ├── _blockies.scss
-│   │   ├── _bootstrap.scss
 │   │   ├── _colors.scss
 │   │   ├── _countdown.scss
 │   │   ├── _custom.scss
@@ -188,6 +186,7 @@ crowdsale-page
 │   ├── index.css
 │   ├── index.js
 │   └── registerServiceWorker.js
+├── LICENSE
 ├── README.md
 ├── package.json
 ├── screenshot.png
