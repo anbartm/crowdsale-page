@@ -8,7 +8,7 @@ export default class PromoMaecens extends Component {
           <div className="row">
             <p className="main-header text-center">WHY CONTRIBUTE?</p>
 
-            <div className="col-size2 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
               <div className="term" />
               <p className="std-s">
                 In life there will be road blocks but we will over come it. Special cloth alert. A

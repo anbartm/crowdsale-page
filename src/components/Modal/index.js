@@ -165,42 +165,33 @@ export default class Modal extends Component {
           <OnPhase phase={phases.phase} display={[0, 1, 2]}>
             <div className="modal-body step step-2">
               <div className="mar-mod2">
-                <div className="row text-left">
-                  <p className="modal-p2">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                    unknown printer took a galley of type and scrambled it to make a type specimen
-                    book.
-                  </p>
-                </div>
-                <div className="row text-left">
-                  <p className="modal-p2">
-                    <span>To avoid uneccessary transaction fees</span>, paste the public address of
-                    your ETH wallet below and <span>check if your wallet is whitelisted:</span>
-                  </p>
-                </div>
+                {!whitelist && (
+                  <div className="row text-center">
+                    <small>
+                      To avoid uneccessary transaction fees, paste the public address of your ETH{' '}
+                      <br />wallet below and check if your wallet is whitelisted:
+                    </small>
+                  </div>
+                )}
                 <div className="row no-gutters">
                   {walletAddress &&
                     whitelist && (
                       <div className="col-12 text-center">
-                        <span>
-                          <OnPhase phase={phases.phase} display={[0, 1]}>
-                            Your wallet is whitelisted, your contribution limit is:
-                          </OnPhase>
-                          <OnPhase phase={phases.phase} display={[2]}>
-                            Your wallet is whitelisted.
-                          </OnPhase>
-                        </span>
+                        <OnPhase phase={phases.phase} display={[0, 1]}>
+                          <b>Your wallet is whitelisted, your contribution limit is:</b>
+                        </OnPhase>
+                        <OnPhase phase={phases.phase} display={[2]}>
+                          Your wallet is whitelisted.
+                        </OnPhase>
                         <OnPhase phase={phases.phase} display={[0, 1]}>
                           <span className="eth-balance">{whitelist} ETH</span>
                         </OnPhase>
-                        <br />
                       </div>
                     )}
-                  <div className="col-1 col-sm-1 col-xs-12 text-center">
+                  <div className="col-xs-12 text-center">
                     {walletAddress && <ReactBlockies seed={walletAddress.toLowerCase()} />}
                   </div>
-                  <div className="col-11 col-sm-11 col-xs-12">
+                  <div className="col-xs-12">
                     <TextInput
                       actions={actions}
                       id="eth-wallet"
@@ -227,7 +218,6 @@ export default class Modal extends Component {
                   <div>
                     <div className="row text-center">
                       <p className="modal-p-wallet">{walletAddress}</p>
-                      <br />
                       <span>
                         <OnPhase phase={phases.phase} display={[0, 1]}>
                           Your wallet is whitelisted, your contribution limit is:
@@ -246,7 +236,6 @@ export default class Modal extends Component {
                 <div className="input-form mar-mod">
                   <h4>
                     Send contribution to this address:<br />
-                    <small>Suggested Gas Limit: 400000</small>
                   </h4>
                   <ReactBlockies seed={ico} />
                   <br />
@@ -257,9 +246,9 @@ export default class Modal extends Component {
                     <button
                       title="Copy address to clipboard"
                       type="button"
-                      className="btn btn-default"
+                      className="btn btn-copy"
                     >
-                      <img src={iconCopy} style={{ width: 24 }} alt="Copy address to clipboard" />
+                      <img src={iconCopy} alt="Copy address to clipboard" />
                     </button>
                   </CopyToClipboard>
                   <br />
@@ -268,7 +257,7 @@ export default class Modal extends Component {
                   )}
                   <p className="input-warning-mod danger text-center">
                     <span>NOTE:</span> DON’T make your contribution from an exchange wallet, even if
-                    it’s whitelisted or you won’t receive your ART tokens.
+                    it’s whitelisted or you won’t receive your tokens.
                   </p>
                 </div>
               </div>

@@ -83,11 +83,11 @@ body {
   margin: 10px auto;
 }
 .modal-p-wallet {
-  border: 1px dashed rgba(114, 114, 114, 0.8);
+  border: 1px dashed rgba(114, 114, 114, 0.5);
   display: inline-block;
   padding: 4px 10px;
   background-color: lightgray;
-  font-size: 1.8rem;
+  font-size: 1rem;
 }
 .modal-p-b {
   font-size: 14px;
@@ -137,7 +137,9 @@ body {
   font-size: 20px;
   font-weight: 800;
   text-align: center;
-  margin-bottom: 10px;
+  margin: 16px 0 16px;
+  display: block;
+
   small {
     margin-bottom: 6px;
     display: block;
@@ -391,21 +393,31 @@ label {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
-.btn-std {
+.btn {
   background-color: $primary-color;
   color: white;
-  border-radius: 3px !important;
-  padding: 4px 12px;
+  border-radius: 3px;
+  padding: 10px 12px;
   box-shadow: none !important;
+  &.btn-copy {
+    background-color: white;
+    border-radius: 0;
+    height: 44px;
+    padding: 0 10px;
+    border: 2px solid $primary-color;
+    img {
+      width: 24px;
+      height: 24px;
+      margin-top: 4px;
+    }
+  }
 }
-.btn-std:focus,
-.btn-std:visited,
-.btn-std:active,
-.btn-std:hover {
-  outline: none;
+.btn:focus,
+.btn:visited,
+.btn:active,
+.btn:hover {
   color: white;
-  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12),
-    0 3px 1px -1px rgba(0, 0, 0, 0.2);
+  background-color: rgba($primary-color, 0.8) !important;
 }
 .sub-header-f {
   text-align: center;
@@ -417,11 +429,7 @@ label {
   width: 50px;
   margin-bottom: 15px;
 }
-@media (min-width: 1500px) {
-  .col-size2 {
-    width: 25%;
-  }
-}
+
 @media (min-width: 1200px) {
   .col-size {
     width: 25%;
@@ -941,10 +949,6 @@ a.mid-grey-text:hover {
   }
   .term {
     width: 100%;
-  }
-  .col-size2 {
-    padding-left: 0;
-    padding-right: 0;
   }
   .col-lg-2:nth-child(2n) {
     padding-right: 5px;
